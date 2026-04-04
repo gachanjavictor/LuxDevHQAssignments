@@ -131,4 +131,22 @@ Create a single interactive Excel dashboard containing the following sections:
 - Include **slicers** for:
   - Rating category  
   - Discount category  
-  - Price range (where applicable)  
+  - Price range (where applicable)
+
+#SOLUTIONS
+## Data Cleaning and Preparation
+- Check for and handle missing values, especially in the **Reviews** and **Rating** columns
+  
+  <img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/d0832c16-ba56-4bd6-97e3-a1c69ff54ca6" />
+  <img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/fd8d6ea6-93dc-4a06-a924-f9bcdf0ced54" />
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/10f9653c-bdc7-452e-ab51-e79691ac6425" />
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/da617328-fb99-47c7-b31e-04a064d7fbfa" />
+
+- Identify and remove duplicate product entries
+
+  <img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/d420590b-768a-4f46-9d4c-096b1c6e3edb" />
+  <img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/0a29722e-5b7f-4911-976c-b6ff8f241d98" />
+
+- Convert price columns into numeric format by removing `"KSh"`, commas, and text  
+  - Use **Split Text to Columns** (Data tab) or **Find and Replace (`Ctrl + H`)**
+  
