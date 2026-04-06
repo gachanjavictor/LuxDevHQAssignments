@@ -138,9 +138,11 @@ Create a single interactive Excel dashboard containing the following sections:
 - Check for and handle missing values, especially in the **Reviews** and **Rating** columns
   
   <img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/d0832c16-ba56-4bd6-97e3-a1c69ff54ca6" />
+  
   <img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/fd8d6ea6-93dc-4a06-a924-f9bcdf0ced54" />
-<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/10f9653c-bdc7-452e-ab51-e79691ac6425" />
-<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/da617328-fb99-47c7-b31e-04a064d7fbfa" />
+  
+  <img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/10f9653c-bdc7-452e-ab51-e79691ac6425" />
+  <img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/da617328-fb99-47c7-b31e-04a064d7fbfa" />
 
 - Identify and remove duplicate product entries
 
@@ -150,3 +152,43 @@ Create a single interactive Excel dashboard containing the following sections:
 - Convert price columns into numeric format by removing `"KSh"`, commas, and text  
   - Use **Split Text to Columns** (Data tab) or **Find and Replace (`Ctrl + H`)**
   
+  <img width="1920" height="1080" alt="Screenshot 2026-04-04 120731" src="https://github.com/user-attachments/assets/493bfe6c-b91b-415a-aa3e-6df8ecca75bd" />
+  <img width="1920" height="1080" alt="Screenshot 2026-04-04 120905" src="https://github.com/user-attachments/assets/674a36b0-8213-4d41-938f-635540cfecad" />
+  <img width="1920" height="1080" alt="Screenshot 2026-04-04 120940" src="https://github.com/user-attachments/assets/5cf11e72-d745-4008-8391-78e236718ac7" />
+
+- Ensure the **Discount** column is numeric and properly formatted as a percentage  
+  - Use Find & Replace, `LEFT/RIGHT` functions, or Text to Columns
+  <img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/4db302f8-84d3-4aa5-aeea-6967b76dc347" />
+  <img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/5937b7ec-31f0-47cd-bf39-eab18d794ed5" />
+
+- Convert the **Rating** column from text format (e.g., `"4.5 out of 5"`) into numeric values
+  <img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/1c639a3c-ca99-4fba-b6ce-ba1f96193758" />
+  <img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/44300613-76bc-4860-9bba-be35e9ede840" />
+  <img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/54331a2d-a0f9-4816-987b-a7ad03c4ba77" />
+  <img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/ba80fef4-4212-4f77-80a2-44dafd73c76d" />
+
+- Convert negative reviews to positive
+  <img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/522a9366-591b-4713-8b01-30d1c69a87a1" />
+  <img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/384b1ae4-1163-43b5-8427-b2a7a90ce0df" />
+
+## Data Enrichment
+Create the following additional columns:
+
+- **Discount Amount (KSh)**  
+  `= Old Price - Current Price`
+  <img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/7f927c6f-3083-479d-ad08-d9060217cf9f" />
+  <img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/0c118184-8350-4547-92c6-ecc1f6fff490" />
+
+- **Rating Category**
+  - *Poor* → ratings below 3  
+  - *Average* → ratings between 3 and 4.4  
+  - *Excellent* → ratings of 4.5 and above
+  <img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/8e2763ec-6ef8-4ace-81fe-fee0d88ace72" />
+  <img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/71c4972b-1c60-4c0b-a27d-0b5abeadfc4a" />
+
+- **Discount Category**
+  - *Low Discount* → discounts below 20%  
+  - *Medium Discount* → discounts between 20% and 40%  
+  - *High Discount* → discounts above 40%
+  <img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/264f3bab-6009-4190-8c24-769c32ac4bb5" />
+  <img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/40a396a3-a6b0-40fb-b809-5e5871bbc5d3" />
