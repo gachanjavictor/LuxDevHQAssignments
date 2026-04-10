@@ -48,37 +48,57 @@ Ensure that columns such as **dates** (OrderDate, DeliveryDate) and **currency**
 ### Solution
 This was answered along with questions 1 and 2.
 
-
 ---
 
 ## Step 2: Data Analysis
 After cleaning, extract insights and calculate key business metrics using DAX.
 
 ### 1. Calculate Total Sales
-- Create a measure to sum all `SalesAmount`.
+What is the total revenue from all products? You should create a measure that sums up `SalesAmount` for all rows in your cleaned dataset
+
+### Solution
+
+<img width="960" height="540" alt="Total revenue dax expression" src="https://github.com/user-attachments/assets/925ab0dd-8500-4221-adee-300bf9b2efc9" />
+<img width="960" height="540" alt="Total revenue card" src="https://github.com/user-attachments/assets/bef99d17-60ea-4d55-b967-ec394eb22a42" />
 
 ### 2. Profit Margin Calculation
-**Formula:**
-- Create measures by:
-  - Product
-  - Region
-  - Time period
+Profit margin is critical for understanding the profitability of your business. The formula to calculate profit margin is:
+`Profit Margin=profit/SalesAmount × 100`
+You need to create a **measure** that calculates this for each transaction and possibly by **product**, **region**, or **time period**.
 
-### 3. Currency Conversion
-- Research exchange rates (USD, EUR, GBP, etc.)
-- Create a DAX measure to standardize currency.
+### Solution
 
-**Example:**  
-- If `EUR → USD = 1.1`, convert all EUR sales accordingly.
+<img width="960" height="540" alt="Profit margin DAX expression" src="https://github.com/user-attachments/assets/d7460abd-08b8-4764-bd74-ecd056ddcc76" />
+<img width="960" height="540" alt="Profit margin and slicers" src="https://github.com/user-attachments/assets/1860f038-1c53-4cfb-af92-362471da038f" />
+
+### 3. Research Market Rates for Currency Conversion
+The dataset uses different currencies (USD, EUR, GBP, etc.). You will need to research the current market exchange rates for the currencies used in the dataset. Using this data, create a DAX measure that converts all currencies to USD (or whichever currency you prefer). The rates can be obtained from various online sources.
+
+Example:
+- If you find the current exchange rate of **EUR to USD** is **1.1**, use this to convert all **EUR sales** into **USD**.
+
+### Solution
+The current exchange rate was found to be as follows:
+- USD to CAD: 1 USD = 1.38 CAD
+- CAD to USD: 1 CAD = 0.72 USD
+
+I used these rates to create a currency conversion table and created a relationship between it and the main table:
+
+<img width="960" height="540" alt="Currency conversion table" src="https://github.com/user-attachments/assets/5842f534-9fe4-4083-92ca-ee186f24c579" />
+
+I then used a DAX expression with the `RELATED` function to create new columns and convert columns with currency data to USD:
+
+<img width="960" height="540" alt="Currency columns in USD" src="https://github.com/user-attachments/assets/ff31315e-4ba5-4f5a-a631-55e7056358f5" />
 
 ### 4. Handling Missing or Incorrect Values
-Consider:
-- Missing data
-- Negative profit values
+What happens when some rows have missing data, or when certain sales figures are too low (e.g., a negative profit)? How will you treat these cases in your analysis?
 
-**Questions:**
-- Should you exclude extreme values?
-- Or adjust them using business logic?
+**Question to consider**:
+- Should you exclude transactions with missing or extreme values, or should you adjust these values based on your business knowledge?
+
+### Solution
+It is important to understand the dataset to determine how missing or incorrect values should be handled. For example, a negative value in the profit column may not necessarily be an incorrect value, as it may indicate a loss.
+It is best not to adjust values unless there is certainty that the changes will not make the analysis incorrect.
 
 ---
 
