@@ -1,11 +1,5 @@
 # Power BI Project: Electronics Sales Data
-
-## Objective
-This project is designed to guide you through the entire Power BI workflow for a real-world scenario involving dirty sales data. You’ll be tasked with cleaning, analyzing, and modeling the data to create a comprehensive dashboard and a detailed report that includes key business insights.  
-
-The dataset includes various real-world challenges such as inconsistent data, missing values, and currency discrepancies. Your goal is to transform this data into something useful for decision-making in an electronics retail business.
-
----
+# Questions And Solutions
 
 ## Instructions
 
@@ -13,51 +7,47 @@ The dataset includes various real-world challenges such as inconsistent data, mi
 Data cleaning is often the most time-consuming part of any analytics project. It's essential to ensure that your data is both accurate and consistent.
 
 ### 1. Ensure Consistency in Data Types
-Some columns might have inconsistent data types.  
-- Example:  
-  - `OrderDate` → should be a date  
-  - `SalesAmount` → should be numeric  
-- Check for text values that don’t match expected formats.
+Some columns might have inconsistent data types. For example, the `OrderDate` column should be a **date** and `SalesAmount` should be a **numeric** type. Check for any text values that don’t match the expected format.
+### Solution
+The dataset was checked to ensure all columns were in the correct data type.
+
+<img width="960" height="540" alt="Date datatype" src="https://github.com/user-attachments/assets/57f084b2-e3f8-432e-a93a-614a185cf49b" />
+<img width="960" height="540" alt="Text datatype" src="https://github.com/user-attachments/assets/4655d02f-7477-443c-8038-75f055451178" />
+<img width="960" height="540" alt="Numeric datatype" src="https://github.com/user-attachments/assets/d103168e-b963-4885-b8a9-626d52b565ee" />
+
 
 ### 2. Check for Spelling Errors
-Look for inconsistencies in:
-- Product names  
-- Country names  
-- Customer emails  
+You'll likely find some inconsistencies in **product names**, **country names**, or even **customer emails**. For example, "Samsung Galaxy S21" might have variations like "Samsung Galaxy S21" and "Samsung GAlaxy S21" in the dataset. Tip: Filter for product names to help standardize them.
 
-**Example:**  
-- "Samsung Galaxy S21"  
-- "Samsung GAlaxy S21"  
+### Solution
+The dataset was checked for incorrect spellings in the columns with text.
 
-**Tip:** Filter product names to standardize them.
+<img width="517" height="692" alt="Products" src="https://github.com/user-attachments/assets/d4e97613-cd4f-4e38-a8e7-c0f2a933fead" />
+<img width="518" height="664" alt="Cities" src="https://github.com/user-attachments/assets/4869575d-583b-4f25-bffd-b3295a90e104" />
 
 ### 3. Missing or Incomplete Data
-Check for empty or missing values in:
-- `Profit`
-- `SalesAmount`
-- `ShippingCost`
+Look for empty cells or missing values in columns such as `Profit`, `SalesAmount`, and `ShippingCost`. It's important to decide whether to remove, impute, or fill these gaps.
 
-Decide whether to:
-- Remove
-- Impute
-- Fill missing values
+### Solution
+The dataset was checked for missing data. There were no empty cells.
+<img width="752" height="67" alt="image" src="https://github.com/user-attachments/assets/c8259802-5f08-42c2-aba8-7fef681a4f25" />
 
 ### 4. Pseudonyms and Invalid Entries
-Some entries may include:
-- "Anonymous"
-- "N/A"
+Sometimes, customers or sales representatives might be recorded as "Anonymous" or "N/A." These entries need to be cleaned or handled to avoid inconsistencies in analysis.
+For example:
+- A row with `CustomerName = "N/A"` in a paid sales transaction should be flagged for review and ensure all pseudoblanks are consistent if any.
 
-**Example:**  
-- A row with `CustomerName = "N/A"` in a paid transaction should be flagged.  
-- Ensure pseudoblanks are handled consistently.
+### Solution
+This was answered along with question 2.
 
 ### 5. Ensure Correct Data Formats
-Standardize formats for:
-- Dates (`OrderDate`, `DeliveryDate`)
-- Currency (`USD`, `EUR`)
-
+Ensure that columns such as **dates** (OrderDate, DeliveryDate) and **currency** (USD, EUR) are consistently formatted. You might need to standardize date formats across the dataset.
 **Example:**  
-- "USD", "usd", "US Dollar" → **standardize to "USD"**
+- If Currency has values like "`USD`", "`usd`", "`US Dollar`", unify them to a single standard format, e.g., "`USD`".
+
+### Solution
+This was answered along with questions 1 and 2.
+
 
 ---
 
