@@ -103,49 +103,26 @@ It is best not to adjust values unless there is certainty that the changes will 
 ---
 
 ## Step 3: Data Modeling
-Structure your data for efficient analysis.
-
-### 1. Create Dimension Tables
-Examples:
-- Customer Information  
-- City  
-- Product Categories  
-- Sales Representatives  
-- Time  
+Modeling in Power BI is about structuring your data efficiently, so that it can be easily analyzed and visualized.
+### 1. Create Dimension Tables:
+You'll need to create **dimension tables** to categorize and group your data. Think of dimension tables as lookup tables that store information like **Customer Information**, **City**, **Product Categories**, **Sales Reps**, and **Time**.
 
 **Example:**  
-- **Product Dimension**
-  - `ProductName`
-  - `Category`
+- **Product Dimension**: Contains columns for `ProductName`, `Category`. This will help in analyzing which products perform the best.
 
 ### 2. Fact Table
-Contains:
-- `OrderID`
-- `SalesAmount`
-- `Profit`
-- `Quantity`
-- `Discount`
+The fact table will store transactional data such as `OrderID`, `SalesAmount`, `Profit`, `Quantity`, and `Discount`.  It's important to link your fact table to the dimension tables using **relationships**.
 
-Link fact table to dimension tables.
-
-**Question:**  
-- How will relationships be defined between:
-  - Customer
-  - Product
-  - Time
+**Question to consider:**  
+- How will the fact table relate to the **customer**, **product**, and **time** tables? Create the appropriate **relationships** in Power BI.
 
 ### 3. Time Dimension
-Include:
-- Year
-- Quarter
-- Month
-- Week
-- Day
-- Date
+A **Time Dimension** is crucial for time-based analysis. This table should include columns 
+for `Year`, `Quarter`, `Month`, `Week`, `Day`, and `Date`. This will allow you to create **time-based aggregations** and trends (e.g., monthly sales, yearly growth).
 
-Enables:
-- Monthly sales
-- Yearly growth analysis
+### Solution
+
+<img width="960" height="540" alt="Schema" src="https://github.com/user-attachments/assets/c7c51850-4370-458e-a226-3962e1ea80a4" />
 
 ---
 
