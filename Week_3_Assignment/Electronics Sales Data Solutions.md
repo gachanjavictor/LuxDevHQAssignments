@@ -128,65 +128,47 @@ for `Year`, `Quarter`, `Month`, `Week`, `Day`, and `Date`. This will allow you t
 
 ## Step 4: Building the Dashboard
 
-Create an interactive Power BI dashboard.
+Your goal here is to create an interactive Power BI dashboard that allows stakeholders to gain valuable insights from the data. 
 
 ### 1. Key Visualizations
-Use only what is necessary:
-
-- **KPI Cards**
-  - Total Sales
-  - Total Profit
-  - Profit Margin  
-
-- **Bar/Column Chart**
-  - Sales by product
-  - Sales by region
-  - Sales by category  
-
-- **Line Chart**
-  - Trends over time  
-
-- **Pie Chart**
-  - Sales distribution by currency or region  
-
+Examples: use only what you deem necessary or important for your dashboard. 
+Consider the following visualizations that can bring out meaningful insights:
+- **KPI Cards**: Display key metrics such as **Total Sales**, **Total Profit**, and **Profit Margin** etc.
+- **Bar Chart/ Column**- Show **sales by product**, **sales by region**, or **sales by category**.
+- **Line Chart**: Display **sales trends over time** (monthly, quarterly).
+- **Pie Chart**: Show the **sales distribution by currency**, or **sales by region**.
 - **Map Visual**
 
 ### 2. Slicers
-Allow filtering by:
-- Region
-- Customer
-- Time period
-- Product category  
+Use **slicers** to allow users to filter the dashboard by **region**, **customer**, **time period**, and **product category**. This will make your dashboard interactive. 
+**Example**: 
+- A slicer for **year** will allow users to analyze sales data for different years.
 
-**Example:**  
-- Year slicer for comparing yearly sales
+### Solution
+
+<img width="960" height="540" alt="Electronic sales data dashboard" src="https://github.com/user-attachments/assets/12d36692-d3b5-40b6-8afe-aae9d24d0651" />
 
 ---
 
 ## Step 5: Creating the Report
+Once your dashboard is built, create a **detailed report** with all the necessary insights. Here are the key components to include:
 
-### 1. Executive Summary
-Summarize:
-- Sales performance
-- Top products
-- Profitability
+### 1. Executive Summary:
+Provide a brief summary of key insights, such as overall sales performance, top-performing products, and profitability.
 
-### 2. Detailed Analysis
-Include:
-- Sales by region
-- Profit margins by product
-- Yearly trends
+### 2. Detailed Analysis:
+Include in-depth analysis for specific metrics. For example, provide a detailed breakdown of **total sales by region**, **profit margins by product**, and **yearly trends**. 
 
-### 3. Visual Insights
-Use charts and slicers to answer:
+### 3. Visual Insights:
+Use charts, tables, and slicers to highlight trends and make the report interactive. Ensure the report answers questions like: 
 - What are the top-performing products?
 - Which region has the highest profit margin?
-- How have sales trended over time?
+- How has sales been trending over the last year?
 
-### 4. Recommendations
-Provide actionable insights:
-- Which products to promote
-- How to improve low-performing regions
+### 4. Recommendations:
+Based on the data, provide business recommendations, such as:
+- Which products should be promoted based on high sales and profit margins?
+- How should the company address regions with lower profitability? 
 
 ---
 
@@ -195,69 +177,15 @@ Provide actionable insights:
 - How should repeat customers be handled?
 - Should missing data be excluded or estimated?
 
----
+### Solution
+- Report Page 1 (Dashboard):
+<img width="960" height="540" alt="Electronic sales data dashboard" src="https://github.com/user-attachments/assets/59b2b600-f5ce-4868-99d6-e1eeb537a846" />
 
-## Power BI Report Structure
+- Report Page 2 (Product Details)
+<img width="960" height="540" alt="Product details report" src="https://github.com/user-attachments/assets/1aeab45c-7199-4e41-a87f-cf90d88347a7" />
 
-### 1. Pages in a Report
-- Multiple pages (like slides)
-- Each page focuses on a specific analysis
+- Report Page 3 (Customer Information)
+<img width="960" height="540" alt="Customer Information Report" src="https://github.com/user-attachments/assets/17beae4b-940d-4cb5-a18f-7a50b248c605" />
 
-### 2. Main Page (Dashboard)
-- KPI cards
-- Slicers
-- Key visuals
-- High-level insights
-
-### 3. Additional Pages
-Example structure:
-- Page 1: KPIs & trends  
-- Page 2: Product performance  
-- Page 3: Geographic analysis  
-- Page 4: Customer/store analysis  
-
-### 4. Page Navigation
-- Use buttons like:
-  - "Next Page"
-  - "Back to Dashboard"
-
----
-
-## Steps to Create Pages
-
-### 1. Create a New Page
-- Click "+" in Power BI Desktop  
-- Rename appropriately
-
-### 2. Design Dashboard Page
-- KPI cards  
-- Charts (bar, pie, line)  
-- Slicers  
-
-### 3. Create Additional Pages
-- Focus each page on a single topic
-
-### 4. Add Interactivity
-- Buttons for navigation  
-- Drill-down features  
-
-### 5. Final Structure
-- Page 1 → Overview  
-- Other pages → Detailed insights  
-
----
-
-## Navigation Between Pages
-- Click tabs at the bottom  
-- Use navigation buttons for smoother UX  
-
----
-
-## Conclusion
-This project challenges you to apply the full Power BI workflow:
-- Data cleaning  
-- Data modeling  
-- DAX calculations  
-- Dashboard creation  
-
-By the end, you will have built a comprehensive Power BI report that delivers actionable insights into an electronics sales business.
+- Report Page 4 (Geographical Information)
+<img width="960" height="540" alt="Geographical information" src="https://github.com/user-attachments/assets/398c45e5-c81c-43f7-a453-751fbb3aad06" />
